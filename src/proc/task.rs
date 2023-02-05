@@ -215,7 +215,7 @@ impl Task {
         }
     }
     
-
+}
 // Implement the PartialEq trait for the Task struct
 impl PartialEq for Task {
     fn eq(&self, other: &Task) -> bool {
@@ -251,3 +251,4 @@ unsafe impl Send for Task {}
 
 // Implement the Sync trait for the Task struct to allow it to be shared between threads
 unsafe impl Sync for Task {}
+
