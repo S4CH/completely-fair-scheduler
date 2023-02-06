@@ -9,4 +9,7 @@ The scheduler requires properties such as weight, maximum allocated CPU time, CP
 
 - The running of the scheduler takes place in a separate thread, which waits for the next systick, a tick of the internal (virtual) clock. When the tick is received, the running event pops the highest priority task from the ready queue and lets it run on the CPU. After the task finishes its CPU burst, it is placed in the idle queue, which is a simple FIFO queue. The task then runs one iteration of its I/O burst before being put back into the ready queue or placed at the back of the idle queue.
 
-- To run the scheduler, you can generate a sequence of random tasks using `python3` by running `python3 generate_tasks.py`. This will write the necessary task characteristics to a `tasks.txt` file, which is then read by the main function in the Rust program to generate the born tasks. To run the Rust program, execute cargo run if you have cargo installed.
+- To run the scheduler, you can generate a sequence of random tasks using `python3` by running `python3 generate_tasks.py`. This will write the necessary task characteristics to a `tasks.txt` file, which is then read by the main function in the Rust program to generate the born tasks. To run the Rust program, execute `cargo run` if you have cargo installed.
+
+### Credits
+The real credit goes to Jackson Isenberg
